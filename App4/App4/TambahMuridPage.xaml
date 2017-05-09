@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.TambahMuridPage">
+
+    <ContentPage.Content>
+        <Grid x:Name="gvMurid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Label Text="Name :" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+            <Entry x:Name="txtName" Text="{Binding KodeBarang}" Placeholder="Enter Name" Grid.Row="0" Grid.Column="1" />
+
+            <Label Text="Age :" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry x:Name="txtAge" Text="{Binding NamaBarang}" Placeholder="Enter Age" Grid.Row="1" Grid.Column="1" />
+
+            <StackLayout Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="2">
+                <Button x:Name="btnSave" HorizontalOptions="EndAndExpand" Text="Save" WidthRequest="150" Clicked="BtnSave_OnClicked" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>
